@@ -84,31 +84,6 @@ const Translate = () => {
 
         synth.cancel(); // Stop any ongoing speech synthesis
         synth.speak(utterance);
-
-        // utterance.addEventListener("start", () => {
-        //   navigator.mediaDevices
-        //     .getUserMedia({ audio: true })
-        //     .then((stream) => {
-        //       const mediaRecorder = new MediaRecorder(stream);
-        //       chunks = [];
-
-        //       mediaRecorder.addEventListener("dataavailable", (event) => {
-        //         chunks.push(event.data);
-        //       });
-
-        //       mediaRecorder.addEventListener("stop", () => {
-        //         const audioBlob = new Blob(chunks, { type: "audio/mp3" });
-        //         const url = URL.createObjectURL(audioBlob);
-        //         const downloadLink = document.createElement("a");
-        //         downloadLink.href = url;
-        //         downloadLink.download = `speech.mp3`;
-        //         downloadLink.click();
-        //         URL.revokeObjectURL(url);
-        //       });
-
-        //       mediaRecorder.start();
-        //     });
-        // });
       });
     });
   }, []);
@@ -144,7 +119,6 @@ const Translate = () => {
               <select></select>
               <div className="icons">
                 <i id="to" className="fas fa-volume-up"></i>
-                <i className="fas fa-download"></i>
               </div>
             </li>
           </ul>
