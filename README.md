@@ -1,4 +1,4 @@
-![image](https://github.com/Ajay-308/react-translator/assets/112794893/df4f9346-caa7-4720-ae83-820d44fcc260)
+![image](https://github.com/Ajay-308/react-translator/assets/112794893/ddaa5637-a94d-4b12-a225-33032f070ebd)
 
 
 
