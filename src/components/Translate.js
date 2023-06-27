@@ -24,7 +24,7 @@ const Translate = () => {
     });
 
     exchageIcon.addEventListener("click", () => {
-      console.log("helo");
+      // console.log("helo");
       let tempText = fromText.value;
       let tempLang = selectTag[0].value;
       console.log(tempText);
@@ -62,7 +62,7 @@ const Translate = () => {
     });
     // Create a new instance of Recorder
     // const recorder = new Recorder();
-    let chunks = [];
+    // let chunks = [];
 
     icons.forEach((icon) => {
       icon.addEventListener("click", ({ target }) => {
@@ -85,30 +85,30 @@ const Translate = () => {
         synth.cancel(); // Stop any ongoing speech synthesis
         synth.speak(utterance);
 
-        utterance.addEventListener("start", () => {
-          navigator.mediaDevices
-            .getUserMedia({ audio: true })
-            .then((stream) => {
-              const mediaRecorder = new MediaRecorder(stream);
-              chunks = [];
+        // utterance.addEventListener("start", () => {
+        //   navigator.mediaDevices
+        //     .getUserMedia({ audio: true })
+        //     .then((stream) => {
+        //       const mediaRecorder = new MediaRecorder(stream);
+        //       chunks = [];
 
-              mediaRecorder.addEventListener("dataavailable", (event) => {
-                chunks.push(event.data);
-              });
+        //       mediaRecorder.addEventListener("dataavailable", (event) => {
+        //         chunks.push(event.data);
+        //       });
 
-              mediaRecorder.addEventListener("stop", () => {
-                const audioBlob = new Blob(chunks, { type: "audio/mp3" });
-                const url = URL.createObjectURL(audioBlob);
-                const downloadLink = document.createElement("a");
-                downloadLink.href = url;
-                downloadLink.download = `speech.mp3`;
-                downloadLink.click();
-                URL.revokeObjectURL(url);
-              });
+        //       mediaRecorder.addEventListener("stop", () => {
+        //         const audioBlob = new Blob(chunks, { type: "audio/mp3" });
+        //         const url = URL.createObjectURL(audioBlob);
+        //         const downloadLink = document.createElement("a");
+        //         downloadLink.href = url;
+        //         downloadLink.download = `speech.mp3`;
+        //         downloadLink.click();
+        //         URL.revokeObjectURL(url);
+        //       });
 
-              mediaRecorder.start();
-            });
-        });
+        //       mediaRecorder.start();
+        //     });
+        // });
       });
     });
   }, []);

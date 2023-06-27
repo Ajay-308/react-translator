@@ -86,25 +86,7 @@ li,
   background: none;
   padding-left: 5px;
 }
-.text-input textarea::-webkit-scrollbar {
-  width: 4px;
-}
-.controls .row select::-webkit-scrollbar {
-  width: 8px;
-}
-.text-input textarea::-webkit-scrollbar-track,
-.controls .row select::-webkit-scrollbar-track {
-  background: #fff;
-}
-.text-input textarea::-webkit-scrollbar-thumb {
-  background: #ddd;
-  border-radius: 8px;
-}
-.controls .row select::-webkit-scrollbar-thumb {
-  background: #999;
-  border-radius: 8px;
-  border-right: 2px solid #ffffff;
-}
+
 .controls .exchange {
   color: #adadad;
   cursor: pointer;
@@ -126,8 +108,11 @@ li,
   border-radius: 2rem;
   font-weight: 700;
   font-style: italic;
-  border-color:3px solid #005daa !important ;
   text-transform: uppercase;
-  color: black;
-  background-color: #f8f7f1
+  background-color: #005daa ;
 }
+.container button:hover{
+  color:black;
+
+}
+
